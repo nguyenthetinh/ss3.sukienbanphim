@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body onload="hi()">
+    <img id="canh" src="anh.jpg" style="position: absolute;left:0;top:0;" width="300" height="200"/>;
+    <script>
+        function len() {
+            let tt=document.getElementById("canh");
+            tt.style.top = parseInt(tt.style.top) - 5 + 'px';
+        }
+        function xuong() {
+            let tt=document.getElementById("canh");
+            tt.style.top = parseInt(tt.style.top) + 5 + 'px';
+        }
+        function trai() {
+            let tt = document.getElementById("canh");
+            tt.style.left = parseInt(tt.style.left) - 5 + 'px'
+        }
+        function phai() {
+            let tt=document.getElementById("canh");
+            tt.style.left = parseInt(tt.style.left) + 5 + 'px';
+        }
+        function dichuyen(evt) {
+            switch (evt.keyCode) {
+                case 38:
+                    len();
+                    break;
+                case 40:
+                    xuong();
+                    break;
+                case 37:
+                    trai();
+                    break;
+                case 39:
+                    phai();
+                    break;
+
+            }
+        }
+        function hi() {
+            window.addEventListener('keydown',dichuyen)
+        }
+    </script>
+
+</body>
+</html>
